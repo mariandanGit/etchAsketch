@@ -1,20 +1,40 @@
+body{
+    background-color: rgb(199, 199, 199);
+}
 #header{
     text-align: center;
 }
-#mainDiv{
+#containerDiv, #buttons, #buttonsDiv{
     display: flex;
     flex-direction: row;
-    justify-content:space-around;
+    justify-content: center;
 }
-#buttons{
+#mainDiv{
     display: flex;
     flex-direction: column;
-    justify-content:space-around;
+    justify-content: space-around;
+    height: 600px;
+}
+#buttonsDiv{
+    width: 100%;
+}
+#containerUnderlay{
+    position:absolute;
+    background-color: white;
+    z-index: -1;
+    width: 500px;
     height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 80px;
 }
 #container{
     display: grid;
     width: 500px;
     height: 500px;
-    border: solid 1px black;
+    border: 10px rgb(0, 0, 0);
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 7px 9px 0px 2px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 7px 9px 0px 2px rgba(0,0,0,0);
 }
