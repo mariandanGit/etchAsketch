@@ -1,23 +1,80 @@
 @import url(https://fonts.googleapis.com/css?family=Satisfy);
+@import url(https://fonts.googleapis.com/css?family=Teko);
 
 h1{
     font-family: 'Satisfy';
     color: wheat;
 }
-
+h2{
+    font-family: 'Teko';
+    color: wheat;
+}
 body{
     background-color: rgb(13, 42, 54);
 }
 #header{
     text-align: center;
 }
-#containerDiv, #buttons, #buttonsDiv, #sliderDiv{
+#containerDiv, #buttons, #buttonsDiv, #sliderDiv, #sliderDivContainer{
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
+#sliderDivContainer{
+    height: 30px;
+}
 #sliderDiv{
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+}
+#sizeSlider{
+    width: 400px;
+    height: 12px;
+    -webkit-appearance: none;
+    background: wheat;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+#sizeSlider:hover{
+    opacity: 1;
+}
+#sizeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(63, 63, 63);
+    cursor: pointer;
+    -webkit-transition: .2s;
+}
+#sizeSlider::-webkit-slider-thumb:hover{
+    background: black;
+}
+#buttonsDiv{
+    width: 100%;
+    height: 40px;
+}
+#buttons{
+    width: 500px;
+    justify-content: space-between;
+    align-items: center;
+}
+.buttonsClass{
+    width: 60px;
+    height: 40px;
+    font-family: 'Teko';
+    font-size: 18px;
+    color: wheat;
+    background-color: rgb(43, 43, 43);
+    border: none;
+    -webkit-transition: .2s;
+}
+.buttonsClass:hover{
+    background-color: black;
+    cursor: pointer;
 }
 #mainDiv{
     display: flex;
@@ -25,12 +82,10 @@ body{
     justify-content: space-around;
     height: 600px;
 }
-#buttonsDiv{
-    width: 100%;
-}
 #containerUnderlay{
     position:absolute;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: white;
+    opacity: 0.1;
     z-index: -1;
     width: 500px;
     height: 500px;
@@ -38,7 +93,7 @@ body{
     margin-right: auto;
     left: 0;
     right: 0;
-    top: 88px;
+    top: 135px;
 }
 #container{
     display: grid;
@@ -46,11 +101,4 @@ body{
     height: 500px;
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 7px 9px 0px 2px rgba(0,0,0,0); 
     box-shadow: 0px 10px 13px -7px #000000, 7px 9px 0px 2px rgba(0,0,0,0);
-}
-#colorPicker{
-    border-radius: 50%;
-}
-
-#sizeSlider{
-    width: 400px;
 }
